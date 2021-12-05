@@ -1,0 +1,41 @@
+.post-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "navbar"
+        "post-header"
+        "post-content"
+        "social-sharing"
+        "author"
+        "footer";
+    height: 100vh;
+}
+
+.post-header {
+    grid-area: post-header;
+    padding: 1rem 0;
+}
+
+.post-content {
+    grid-area: post-content;
+    padding: 1rem 0;
+}
+
+.social-sharing {
+    grid-area: social-sharing;
+}
+
+.author {
+    grid-area: author;
+}
+
+.gutter-post {
+    padding: 2rem;
+}
+
+@media only screen and (min-width: 900px) {
+    .gutter-post {
+        padding: 1rem 15%;
+    }
+}
