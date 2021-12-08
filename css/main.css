@@ -14,12 +14,12 @@ body {
 }
 
 .gutter {
-    padding: 2rem;
+    padding: 3rem;
 }
 
 @media only screen and (min-width: 900px) {
     .gutter {
-        padding: 3rem 5rem;
+        padding: 3rem 8rem;
     }
 }
 
@@ -198,7 +198,7 @@ a:hover, a:focus {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 4rem;
+    padding: 3rem;
 }
 
 .hero-title {
@@ -219,6 +219,16 @@ a:hover, a:focus {
     display: flex;
     gap: 2rem;
     margin-top: 2rem;
+}
+
+@media only screen and (min-width: 900px) {
+    .hero {
+        padding: 3rem 8rem;
+    }
+
+    .hero-subtitle {
+        width: 50%;
+    }
 }
 
 /* Recent Posts */
