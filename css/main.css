@@ -14,12 +14,12 @@ body {
 }
 
 .gutter {
-    padding: 2rem;
+    padding: 3rem;
 }
 
 @media only screen and (min-width: 900px) {
     .gutter {
-        padding: 3rem 5rem;
+        padding: 3rem 8rem;
     }
 }
 
@@ -58,6 +58,11 @@ p {
     line-height: 150%;
     color: #444;
 }
+
+.highlight {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 25%, #77a586 75%);
+}
+
 /*Text*/
 
 /* Links */
@@ -163,6 +168,7 @@ a:hover, a:focus {
         grid-template-rows: 1fr;
         grid-template-areas:
             "navbar-logo navbar-links";
+        min-height: 70px;
     }
     
     .navbar-menu-icon {
@@ -177,6 +183,51 @@ a:hover, a:focus {
         justify-content: flex-end;
         align-items: center;
         padding: 1rem;
+    }
+}
+
+/* Hero */
+.hero {
+    height: 550px;
+    background: url(/images/dan-backpack.jpg) no-repeat center right;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+@media only screen and (min-width: 900px) {
+    .hero {
+        padding: 3rem 8rem;
+    }
+
+    .hero-subtitle {
+        width: 50%;
     }
 }
 
@@ -232,192 +283,46 @@ a:hover, a:focus {
 /*Buttons*/
 .btn {
     font-family: "Roboto", "Arial", "Helvetica", "sans-serif";
-    font-size: 0.9rem;
-    font-weight: 400;
+    font-size: 1.0rem;
+    font-weight: 700;
     display: inline-block;
     vertical-align: middle;
     text-align: center;
-    margin: 10px;
+    margin: auto;
     padding: 10px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .btn:hover .btn:hover {
     text-decoration: none;
 }
 
-.btn-green {
+.btn-primary {
     background-color: #20a999;
     border: 1px solid #20a999;
     color: #fff;
-    box-shadow: 2px 3px 3px #C3CBD3;
 }
 
-.btn-green:hover, .btn-green:focus {
+.btn-primary:hover, .btn-primary:focus {
     background-color: #0e9081;
     border: 1px solid #0e9081;
     color: #fff;
     text-decoration: none;
-    box-shadow: 2px 3px 3px #C3CBD3;
 }
 
-.btn-ghost {
-    border: 1px solid #757575;
-    color: #757575;
+.btn-hero {
+    border: 1px solid #fff;
+    background-color: #fff;
+    color: #rgba(255, 255, 255, 0);
+    text-transform: uppercase;
 }
 
-.btn-ghost:hover, .btn-ghost:focus {
-    border: 1px solid #444;
-    color: #444;
+.btn-hero:hover, .btn-ghost:focus {
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
     text-decoration: none;
 }
 /*Buttons*/
-
-/* Geocoder */
-
-@media only screen and (min-width: 1028px)  {
-    .geocoder-container > .mapboxgl-ctrl-geocoder {
-        font: 15px/25px 'Roboto', Arial, sans-serif;
-        position: relative;
-        background-color: white;
-        border-radius: 5px;
-        border: 1px solid #ddd;
-        width: 40vw;
-        min-width: 400px;
-        max-width: 500px;
-        margin-left: 0;
-    }
-}
-
-.geocoder {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    /* align-items: center; */
-}
-
-.geocoder-container > .mapboxgl-ctrl-geocoder {
-    font: 15px/25px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    position: relative;
-    background-color: white;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    width: 80vw;
-    min-width: 250px;
-    max-width: 380px;
-    margin-left: 0;
-}
-
-.geocoder-container > .mapboxgl-ctrl-geocoder ul {
-    background-color: #fff;
-    border-radius: 0 0 5px 5px;
-    border: 1px solid #999;
-    box-shadow: none;
-    left: 0;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    width: 100%;
-    top: 100%;
-    overflow: hidden;
-    font-size: 12px;
-    text-align: left;
-}
-
-.geocoder-container > .mapboxgl-ctrl-geocoder, .mapboxgl-ctrl-geocoder ul {
-    box-shadow: none;
-    border: 1px solid #999;
-}
-
-.geocoder-container > .mapboxgl-ctrl-geocoder input[type='text'] {
-    font-size: 14px;
-    width: 100%;
-    border: 0;
-    background-color: transparent;
-    height: 40px;
-    margin: 0 30px;
-    color: rgba(0,0,0,.5);
-    padding: 10px 40px 10px 10px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-
-
-/* Geocoder */
-
-
-/* Map */
-#map {
-    height: 57vh;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-}
-/*Map*/
-
-
-.map-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding-bottom: 20px;
-}
-
-.result-block {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 30px;
-}
-
-.result {
-    text-align: center;
-    background-color: #20a999;
-    border-radius: 50%;
-    min-width: 60px;
-    min-height: 60px;
-    border: 6px solid #fff;
-    border-radius: 100%;
-    box-shadow: 0 1px 4px rgba(0,0,0,.3);
-}
-
-.result h1 {
-    line-height: 0.5;
-    color: #fff;
-}
-
-.result-text {
-    padding-left: 10px;
-    max-width: 200px;
-}
-
-.donate-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.message {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 30px 10px 30px;
-}
-
-.message p {
-    margin: 0;
-    font-size: 0.9rem;
-    font-weight: 400;
-    line-height: 125%;
-    color: #757575;
-}
-© 2021 GitHub, Inc.
