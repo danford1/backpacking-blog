@@ -1,3 +1,15 @@
+/* Color Palette*/
+/*
+#000
+#3B322C
+#4E6151
+#77a586
+#bbd1cc
+#f0edeb
+#fff
+*/
+
+/* General */
 html,
 body {
     height: 100%;
@@ -14,41 +26,43 @@ body {
 }
 
 .gutter {
-    padding: 2rem;
+    padding: 3rem;
 }
 
 @media only screen and (min-width: 900px) {
     .gutter {
-        padding: 3rem 5rem;
+        padding: 3rem 8rem;
     }
 }
 
 /*Text*/
-
 h1,
 h2,
 h3,
 h4 {
-    font-weight: normal;
     color: #000;
 }
 
 
 
 h1 {
+    font-family: 'Roboto Slab', serif;
     font-size: 2.0rem;
 }
 
 h2 {
-    font-size: 1.6rem;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #3B322C;
 }
 
 h3 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
 h4 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 p {
@@ -58,17 +72,20 @@ p {
     line-height: 150%;
     color: #444;
 }
-/*Text*/
+
+.highlight {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 25%, #77a586 75%);
+}
 
 /* Links */
 a {
-    color: #077059;
+    color: #099274;
     word-wrap: break-word;
     text-decoration: none;
 }
 
 a:hover, a:focus {
-    color: #099274;
+    color: #05614d;
     text-decoration: underline;
     outline: 0;
 }
@@ -163,6 +180,7 @@ a:hover, a:focus {
         grid-template-rows: 1fr;
         grid-template-areas:
             "navbar-logo navbar-links";
+        min-height: 70px;
     }
     
     .navbar-menu-icon {
@@ -178,6 +196,78 @@ a:hover, a:focus {
         align-items: center;
         padding: 1rem;
     }
+}
+
+/* Hero */
+.hero {
+    height: 550px;
+    background: linear-gradient(to right,rgba(0, 0, 0, 50%), rgba(0, 0, 0, 0%)), url(/images/dan-backpack.jpg) no-repeat center right;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+}
+
+.hero-btns {
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+@media only screen and (min-width: 900px) {
+    .hero-subtitle {
+        width: 50%;
+    }
+
+    .hero-btns {
+        flex-flow: nowrap;
+    }
+}
+
+/* Featured Post */
+.feat-post {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
+        "feat-post-title"
+        "feat-post-card";
+    background-color: #f0edeb;
+}
+
+.feat-post-title {
+    grid-area: feat-post-title;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.feat-post-card {
+    grid-area: feat-post-card;
 }
 
 /* Recent Posts */
@@ -197,8 +287,21 @@ a:hover, a:focus {
     background-color: #f8f8f8;
 }
 
+.recent-posts a:hover, a:focus {
+    text-decoration: none;
+}
+
 .recent-posts-title {
     grid-area: recent-posts-title;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.recent-posts-title h2 {
+    min-width: 190px;
 }
 
 .card1 {
@@ -232,15 +335,14 @@ a:hover, a:focus {
 /*Buttons*/
 .btn {
     font-family: "Roboto", "Arial", "Helvetica", "sans-serif";
-    font-size: 0.9rem;
-    font-weight: 400;
+    font-size: 1.0rem;
+    font-weight: 700;
     display: inline-block;
     vertical-align: middle;
     text-align: center;
-    margin: 10px;
-    padding: 10px;
+    padding: 15px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 100px;
     cursor: pointer;
 }
 
@@ -248,176 +350,30 @@ a:hover, a:focus {
     text-decoration: none;
 }
 
-.btn-green {
-    background-color: #20a999;
-    border: 1px solid #20a999;
+.btn-primary {
+    background-color: #4E6151;
+    border: 3px solid #4E6151;
     color: #fff;
-    box-shadow: 2px 3px 3px #C3CBD3;
+    padding: 10px;
 }
 
-.btn-green:hover, .btn-green:focus {
-    background-color: #0e9081;
-    border: 1px solid #0e9081;
-    color: #fff;
-    text-decoration: none;
-    box-shadow: 2px 3px 3px #C3CBD3;
-}
-
-.btn-ghost {
-    border: 1px solid #757575;
-    color: #757575;
-}
-
-.btn-ghost:hover, .btn-ghost:focus {
-    border: 1px solid #444;
-    color: #444;
-    text-decoration: none;
-}
-/*Buttons*/
-
-/* Geocoder */
-
-@media only screen and (min-width: 1028px)  {
-    .geocoder-container > .mapboxgl-ctrl-geocoder {
-        font: 15px/25px 'Roboto', Arial, sans-serif;
-        position: relative;
-        background-color: white;
-        border-radius: 5px;
-        border: 1px solid #ddd;
-        width: 40vw;
-        min-width: 400px;
-        max-width: 500px;
-        margin-left: 0;
-    }
-}
-
-.geocoder {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    /* align-items: center; */
-}
-
-.geocoder-container > .mapboxgl-ctrl-geocoder {
-    font: 15px/25px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    position: relative;
-    background-color: white;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    width: 80vw;
-    min-width: 250px;
-    max-width: 380px;
-    margin-left: 0;
-}
-
-.geocoder-container > .mapboxgl-ctrl-geocoder ul {
+.btn-primary:hover, .btn-primary:focus {
     background-color: #fff;
-    border-radius: 0 0 5px 5px;
-    border: 1px solid #999;
-    box-shadow: none;
-    left: 0;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    width: 100%;
-    top: 100%;
-    overflow: hidden;
-    font-size: 12px;
-    text-align: left;
+    border: 3px solid #4E6151;
+    color: #4E6151;
+    text-decoration: none;
 }
 
-.geocoder-container > .mapboxgl-ctrl-geocoder, .mapboxgl-ctrl-geocoder ul {
-    box-shadow: none;
-    border: 1px solid #999;
+.btn-hero {
+    border: 1px solid #f0edeb;
+    background-color: #f0edeb;
+    color: #3B322C;
+    text-transform: uppercase;
 }
 
-.geocoder-container > .mapboxgl-ctrl-geocoder input[type='text'] {
-    font-size: 14px;
-    width: 100%;
-    border: 0;
-    background-color: transparent;
-    height: 40px;
-    margin: 0 30px;
-    color: rgba(0,0,0,.5);
-    padding: 10px 40px 10px 10px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+.btn-hero:hover, .btn-hero:focus {
+    border: 1px solid #3B322C;
+    background-color: #3B322C;
+    color: #f0edeb;
+    text-decoration: none;
 }
-
-
-
-/* Geocoder */
-
-
-/* Map */
-#map {
-    height: 57vh;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-}
-/*Map*/
-
-
-.map-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding-bottom: 20px;
-}
-
-.result-block {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 30px;
-}
-
-.result {
-    text-align: center;
-    background-color: #20a999;
-    border-radius: 50%;
-    min-width: 60px;
-    min-height: 60px;
-    border: 6px solid #fff;
-    border-radius: 100%;
-    box-shadow: 0 1px 4px rgba(0,0,0,.3);
-}
-
-.result h1 {
-    line-height: 0.5;
-    color: #fff;
-}
-
-.result-text {
-    padding-left: 10px;
-    max-width: 200px;
-}
-
-.donate-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.message {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 30px 10px 30px;
-}
-
-.message p {
-    margin: 0;
-    font-size: 0.9rem;
-    font-weight: 400;
-    line-height: 125%;
-    color: #757575;
-}
-© 2021 GitHub, Inc.
