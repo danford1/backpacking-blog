@@ -1,3 +1,15 @@
+/* Color Palette*/
+/*
+#000
+#3B322C
+#4E6151
+#77a586
+#bbd1cc
+#f0edeb
+#fff
+*/
+
+/* General */
 html,
 body {
     height: 100%;
@@ -24,31 +36,33 @@ body {
 }
 
 /*Text*/
-
 h1,
 h2,
 h3,
 h4 {
-    font-weight: normal;
     color: #000;
 }
 
 
 
 h1 {
+    font-family: 'Roboto Slab', serif;
     font-size: 2.0rem;
 }
 
 h2 {
-    font-size: 1.6rem;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #3B322C;
 }
 
 h3 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
 h4 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 p {
@@ -63,17 +77,15 @@ p {
     background: linear-gradient(180deg, rgba(255,255,255,0) 25%, #77a586 75%);
 }
 
-/*Text*/
-
 /* Links */
 a {
-    color: #077059;
+    color: #099274;
     word-wrap: break-word;
     text-decoration: none;
 }
 
 a:hover, a:focus {
-    color: #099274;
+    color: #05614d;
     text-decoration: underline;
     outline: 0;
 }
@@ -189,7 +201,7 @@ a:hover, a:focus {
 /* Hero */
 .hero {
     height: 550px;
-    background: url(/images/dan-backpack.jpg) no-repeat center right;
+    background: linear-gradient(to right,rgba(0, 0, 0, 50%), rgba(0, 0, 0, 0%)), url(/images/dan-backpack.jpg) no-repeat center right;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -198,7 +210,6 @@ a:hover, a:focus {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 3rem;
 }
 
 .hero-title {
@@ -217,18 +228,46 @@ a:hover, a:focus {
 
 .hero-btns {
     display: flex;
+    flex-flow: column;
     gap: 2rem;
     margin-top: 2rem;
 }
 
 @media only screen and (min-width: 900px) {
-    .hero {
-        padding: 3rem 8rem;
-    }
-
     .hero-subtitle {
         width: 50%;
     }
+
+    .hero-btns {
+        flex-flow: nowrap;
+    }
+}
+
+/* Featured Post */
+.feat-post {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
+        "feat-post-title"
+        "feat-post-card";
+    background-color: #f0edeb;
+}
+
+.feat-post-title {
+    grid-area: feat-post-title;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.feat-post-card {
+    grid-area: feat-post-card;
 }
 
 /* Recent Posts */
@@ -248,8 +287,21 @@ a:hover, a:focus {
     background-color: #f8f8f8;
 }
 
+.recent-posts a:hover, a:focus {
+    text-decoration: none;
+}
+
 .recent-posts-title {
     grid-area: recent-posts-title;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.recent-posts-title h2 {
+    min-width: 190px;
 }
 
 .card1 {
@@ -288,11 +340,10 @@ a:hover, a:focus {
     display: inline-block;
     vertical-align: middle;
     text-align: center;
-    margin: auto;
-    padding: 10px;
+    padding: 15px 20px;
     border: none;
+    border-radius: 100px;
     cursor: pointer;
-    white-space: nowrap;
 }
 
 .btn:hover .btn:hover {
@@ -300,29 +351,29 @@ a:hover, a:focus {
 }
 
 .btn-primary {
-    background-color: #20a999;
-    border: 1px solid #20a999;
+    background-color: #4E6151;
+    border: 3px solid #4E6151;
     color: #fff;
+    padding: 10px;
 }
 
 .btn-primary:hover, .btn-primary:focus {
-    background-color: #0e9081;
-    border: 1px solid #0e9081;
-    color: #fff;
+    background-color: #fff;
+    border: 3px solid #4E6151;
+    color: #4E6151;
     text-decoration: none;
 }
 
 .btn-hero {
-    border: 1px solid #fff;
-    background-color: #fff;
-    color: #rgba(255, 255, 255, 0);
+    border: 1px solid #f0edeb;
+    background-color: #f0edeb;
+    color: #3B322C;
     text-transform: uppercase;
 }
 
-.btn-hero:hover, .btn-ghost:focus {
-    border: 1px solid #000;
-    background-color: #000;
-    color: #fff;
+.btn-hero:hover, .btn-hero:focus {
+    border: 1px solid #3B322C;
+    background-color: #3B322C;
+    color: #f0edeb;
     text-decoration: none;
 }
-/*Buttons*/
