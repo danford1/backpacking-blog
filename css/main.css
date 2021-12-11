@@ -137,6 +137,7 @@ a:hover, a:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
 }
 
 
@@ -330,6 +331,17 @@ a:hover, a:focus {
             "card-one card-two"
             "card-three card-four";
     }
+}
+
+/* Footer */
+.footer-social-icons {
+    padding: 10px;
+}
+
+.footer-social-icons a {
+    padding: 10px;
+    font-size: 2rem;
+    color: #808080;
 }
 
 /*Buttons*/

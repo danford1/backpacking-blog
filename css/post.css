@@ -6,28 +6,116 @@
         "navbar"
         "post-header"
         "post-content"
-        "social-sharing"
         "author"
         "footer";
     height: 100vh;
 }
 
+.post-date {
+    font-style: italic;
+    font-weight: 300;
+}
+
 .post-header {
     grid-area: post-header;
-    padding: 1rem 0;
+    border-bottom: 2px solid #f0edeb;
 }
 
 .post-content {
     grid-area: post-content;
-    padding: 1rem 0;
+    padding: 1rem 0 3rem 0;
+}
+
+figure {
+    margin: 1.5em auto;
+}
+
+.post-img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+figcaption {
+    margin: 0.5em;
+    color: #808080;
 }
 
 .social-sharing {
-    grid-area: social-sharing;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.social-sharing a {
+    padding: 10px;
+    font-size: 2rem;
 }
 
 .author {
     grid-area: author;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "author-avatar"
+        "author-name"
+        "author-title"
+        "author-company"
+        "author-bio";
+    gap: 5px;
+    background-color: #f0edeb;
+    border: 1px solid #b1afae;
+    border-radius: 4px;
+    padding: 2rem;
+    justify-items: center;
+    text-align: center;
+}
+
+.author-avatar {
+    grid-area: author-avatar;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.author-avatar img {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+}
+
+.author-name {
+    grid-area: author-name;
+}
+
+.author-name p {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.author-title {
+    grid-area: author-title;
+}
+
+.author-title p {
+    font-size: 1.1em;
+}
+
+.author-company {
+    grid-area: author-company;
+}
+
+.author-company p {
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+.author-bio {
+    grid-area: author-bio;
 }
 
 .gutter-post {
@@ -36,6 +124,6 @@
 
 @media only screen and (min-width: 900px) {
     .gutter-post {
-        padding: 1rem 15%;
+        padding: 1rem 25%;
     }
 }
