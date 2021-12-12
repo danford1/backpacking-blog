@@ -5,8 +5,11 @@
 #4E6151
 #77a586
 #bbd1cc
-#f0edeb
+#b1afae footer text color
+#f0edeb div area background option
 #fff
+#5E5D65 logo and link
+#37363b link focus
 */
 
 /* General */
@@ -54,7 +57,7 @@ h2 {
     font-family: 'Roboto Slab', serif;
     font-size: 1.8rem;
     font-weight: 700;
-    color: #3B322C;
+    color: #37363b;
 }
 
 h3 {
@@ -70,7 +73,7 @@ p {
     font-size: 1.0rem;
     font-weight: 400;
     line-height: 150%;
-    color: #444;
+    color: #5E5D65;
 }
 
 .highlight {
@@ -79,13 +82,13 @@ p {
 
 /* Links */
 a {
-    color: #099274;
+    color: #5E5D65;
     word-wrap: break-word;
     text-decoration: none;
 }
 
 a:hover, a:focus {
-    color: #05614d;
+    color: #37363b;
     text-decoration: underline;
     outline: 0;
 }
@@ -148,7 +151,8 @@ a:hover, a:focus {
     grid-template-rows: 1fr;
     grid-template-areas:
         "navbar-logo navbar-menu-icon";
-    background-color: #fff;
+    background-color: #f0edeb;
+    padding: 0 1rem;
 }
 
 .navbar-logo {
@@ -169,6 +173,10 @@ a:hover, a:focus {
     padding: 1rem;
 }
 
+.navbar-menu-icon p {
+    font-size: 2rem;
+}
+
 .navbar-links {
     grid-area: navbar-links;
     display: none;
@@ -177,25 +185,44 @@ a:hover, a:focus {
 @media only screen and (min-width: 900px) {
     .navbar {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 3fr 1fr;
         grid-template-rows: 1fr;
         grid-template-areas:
             "navbar-logo navbar-links";
-        min-height: 70px;
+        padding: 0 5rem;
     }
     
     .navbar-menu-icon {
         grid-area: navbar-menu-icon;
         display: none;
     }
+
+    .navbar-logo img {
+        height: auto;
+    }
     
     .navbar-links {
         grid-area: navbar-links;
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
+    }
+
+    .navbar-links a {
+        display: flex;
+        justify-content: center;
         align-items: center;
-        padding: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+        color: #37363b;
+        width: 50%;
+    }
+
+    .navbar-links a:hover {
+        background-color: #5E5D65;
+        color: #fff;
+        text-decoration: none;
     }
 }
 
@@ -363,29 +390,29 @@ a:hover, a:focus {
 }
 
 .btn-primary {
-    background-color: #4E6151;
-    border: 3px solid #4E6151;
+    background-color: #5E5D65;
+    border: 3px solid #5E5D65;
     color: #fff;
     padding: 10px;
 }
 
 .btn-primary:hover, .btn-primary:focus {
-    background-color: #fff;
-    border: 3px solid #4E6151;
-    color: #4E6151;
+    background-color: #37363b;
+    border: 3px solid #37363b;
+    color: #fff;
     text-decoration: none;
 }
 
 .btn-hero {
     border: 1px solid #f0edeb;
     background-color: #f0edeb;
-    color: #3B322C;
+    color: #37363b;
     text-transform: uppercase;
 }
 
 .btn-hero:hover, .btn-hero:focus {
-    border: 1px solid #3B322C;
-    background-color: #3B322C;
+    border: 1px solid #37363b;
+    background-color: #37363b;
     color: #f0edeb;
     text-decoration: none;
 }
