@@ -360,6 +360,31 @@ a:hover, a:focus {
     }
 }
 
+/* Subscribe form */
+.cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.cta h2 {
+    margin: auto;
+}
+
+input {
+    margin: 1rem;
+}
+
+input[type=text] {
+    padding: 12px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    resize: vertical
+}
+
 /* Footer */
 .footer-social-icons {
     padding: 10px;
