@@ -40,6 +40,18 @@ figcaption {
     color: #808080;
 }
 
+.post p a {
+    color: #77a586;
+    word-wrap: break-word;
+    text-decoration: underline;
+}
+
+.post p a:hover, p a:focus {
+    color: #4E6151;
+    text-decoration: underline;
+    outline: 0;
+}
+
 .social-sharing {
     display: flex;
     flex-direction: row;

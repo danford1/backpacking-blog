@@ -76,6 +76,26 @@ p {
     color: #5E5D65;
 }
 
+.bold {
+    font-weight: 700;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+blockquote {
+    color: #5E5D65;
+    background: #f0edeb;
+    border-left: 10px solid #5E5D65;
+    margin: 1em;
+    padding: 1em;
+}
+
 .highlight {
     background: linear-gradient(180deg, rgba(255,255,255,0) 25%, #77a586 75%);
 }
