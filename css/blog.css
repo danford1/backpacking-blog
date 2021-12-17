@@ -1,5 +1,3 @@
-
-
 /* Blog Page Grid */
 .blog-container {
     display: grid;
@@ -11,58 +9,4 @@
         "cta"
         "footer";
     height: 100vh;
-}
-
-/* Recent Posts */
-.blog-page {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr repeat(5, 5fr);
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
-    grid-template-areas:
-        "recent-posts-title"
-        "card-feat"
-        "card-one"
-        "card-two"
-        "card-three"
-        "card-four";
-    background-color: #f8f8f8;
-}
-
-.recent-posts-title {
-    grid-area: recent-posts-title;
-}
-
-.card0 {
-    grid-area: card-feat;
-}
-
-.card1 {
-    grid-area: card-one;
-}
-
-.card2 {
-    grid-area: card-two;
-}
-
-.card3 {
-    grid-area: card-three;
-}
-
-.card4 {
-    grid-area: card-four;
-}
-
-@media only screen and (min-width: 900px) {
-    /* .recent-posts {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 60px repeat(2, 1fr);
-        grid-template-areas:
-            "recent-posts-title recent-posts-title"
-            "card1 card2"
-            "card3 card4";
-    } */
 }
