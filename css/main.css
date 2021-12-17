@@ -249,7 +249,7 @@ a:hover, a:focus {
 /* Hero */
 .hero {
     height: 550px;
-    background: linear-gradient(to right,rgba(0, 0, 0, 50%), rgba(0, 0, 0, 0%)), url(/images/dan-backpack.jpg) no-repeat center right;
+    background: linear-gradient(to right,rgba(0, 0, 0, 50%), rgba(0, 0, 0, 0%)), url(images/dan-backpack.jpg) no-repeat center right;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
