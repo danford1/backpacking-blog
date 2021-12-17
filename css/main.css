@@ -322,16 +322,12 @@ a:hover, a:focus {
 .recent-posts {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 60px repeat(4, 1fr);
     gap: 2rem;
     justify-content: center;
     align-items: center;
     grid-template-areas:
         "recent-posts-title"
-        "card-one"
-        "card-two"
-        "card-three"
-        "card-four";
+        "post-cards";
     background-color: #f8f8f8;
 }
 
@@ -352,32 +348,14 @@ a:hover, a:focus {
     min-width: 190px;
 }
 
-.card1 {
-    grid-area: card-one;
-}
-
-.card2 {
-    grid-area: card-two;
-}
-
-.card3 {
-    grid-area: card-three;
-}
-
-.card4 {
-    grid-area: card-four;
-}
-
-@media only screen and (min-width: 900px) {
-    .recent-posts {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 60px repeat(2, 1fr);
-        grid-template-areas:
-            "recent-posts-title recent-posts-title"
-            "card-one card-two"
-            "card-three card-four";
-    }
+/* responsive grid for cards */
+.post-cards {
+    grid-area: post-cards;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 1fr));
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Subscribe form */
