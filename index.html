@@ -36,9 +36,9 @@
 
 </head>
 <body>
-    <div class="container">
+    <main class="container">
         <!-- Navbar -->
-        <div class="navbar">
+        <nav class="navbar">
             <div class="navbar-logo">  
                 <a href="#"><img src="images/logo.svg" alt="Backcountry Logbook"></a>
             </div>
@@ -49,33 +49,31 @@
                 <a class="nav-link" href="blog.html">Blog</a>
                 <a class="nav-link" href="#subscribe">Subscribe</a>
             </div>
-        </div>
+        </nav>
         <!-- Hero -->
-        <div class="hero gutter">
+        <header class="hero gutter">
             <h1 class="hero-title">Exploring the outdoors</h1>
             <p class="hero-subtitle">Travel along with us as we venture into the wild with only the stuff on our backs</p>
             <div class="hero-btns">
                 <a href="blog.html" class="btn btn-hero">See recent posts</a>
                 <a href="#subscribe" class="btn btn-hero">Subscribe</a>
             </div>
-        </div>
+        </header>
         <!-- Featured Post -->
-        <div class="feat-post gutter">
+        <section class="feat-post gutter">
             <h2 class="feat-post-title">Featured post</h2>           
-            <div class="card feat-post-card">
+            <article class="card feat-post-card">
                 <img src="images/devils-causeway.jpg" class="card-img" alt="Flat Tops Wilderness">
                 <div class="card-body">
                     <h3 class="card-title">Crossing the Devil's Causeway in the Flat Tops Wilderness</h3>
                     <p class="card-text">We balanced across a narrow rock scramble on the final day of a trek across the high plateau of the Flat Tops Wilderness in Colorado.</p>
                     <a href="posts/Colorado-Flat-Tops-Wilderness.html" class="btn btn-primary readmore">Read more...</a>
                 </div>
-            </div>
-        </div>
+            </article>
+        </section>
         <!-- Recent Posts -->
-        <div class="recent-posts gutter">
-            <div class="recent-post-title">
-                <h2>Recent posts</h2>
-            </div>
+        <section class="recent-posts gutter">
+            <h2 class="recent-post-title">Recent posts</h2>
             <div class="post-cards">
                 <a href="posts/Colorado-Lost-Creek-Wilderness.html" class="card recent-post-card">
                     <img src="images/lost-creek-wilderness.jpg" class="card-img" alt="Lost Creek Wilderness">
@@ -110,25 +108,25 @@
                     </div>
                 </a>
             </div>
-        </div>
+        </section>
         <!-- Call to Action -->
-        <div id="subscribe" class="cta gutter">
+        <section id="subscribe" class="cta gutter">
             <h2>Join our community</h2>
             <p>Subscribe to our mailing list to get updates on backingpacking adventures!</p>
             <form action="#">
                 <input type="text" id="email" name="email" placeholder="name@website.com">
                 <input type="submit" class="btn btn-primary" value="Subscribe">
-              </form>
-        </div>
+            </form>
+        </section>
         <!-- Footer -->
-        <div class="footer">
+        <footer class="footer">
             <div class="footer-social-icons">
                 <a href="https://twitter.com/DanJFord"><i class="fab fa-twitter-square"></i></a>
                 <a href="http://www.danford.us"><i class="fas fa-external-link-square-alt"></i></a>
                 <a href="https://github.com/danford1"><i class="fab fa-github-square"></i></a>
             </div>
             <p>&copy; 2021 Dan Ford</p>
-        </div>
-    </div>
+        </footer>
+    </main>
 </body>
 </html>
